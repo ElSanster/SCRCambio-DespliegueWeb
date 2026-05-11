@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +7,10 @@
     <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
     <link href="./output.css" rel="stylesheet">
     <link href="./main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-<div class="bg-white">
+<body class="bg-white dark:bg-zinc-900">
+<div class="bg-white dark:bg-zinc-900">
   <header class="absolute inset-x-0 top-0 z-50">
     <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
       <div class="flex lg:flex-1">
@@ -28,9 +29,9 @@
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
-        <a href="#" class="text-sm/6 font-semibold text-gray-900">Inicio</a>
-        <a href="download.html" class="text-sm/6 font-semibold text-gray-900">Descargar</a>
-        <a href="https://github.com/ElSanster/SCRCambio" class="text-sm/6 font-semibold text-gray-900">Github</a>
+        <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">Inicio</a>
+        <a href="download.html" class="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">Descargar</a>
+        <a href="https://github.com/ElSanster/SCRCambio" class="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">Github</a>
       </div>
     </nav>
     <el-dialog>
@@ -52,9 +53,9 @@
             <div class="mt-6 flow-root">
               <div class="-my-6 divide-y divide-gray-500/10">
                 <div class="space-y-2 py-6">
-                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Inicio</a>
-                  <a href="download.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Descargar</a>
-                  <a href="https://github.com/ElSanster/SCRCambio" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Github</a>
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-100 dark:hover:bg-gray-700">Inicio</a>
+                  <a href="download.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-100 dark:hover:bg-gray-700">Descargar</a>
+                  <a href="https://github.com/ElSanster/SCRCambio" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-100 dark:hover:bg-gray-700">Github</a>
                 </div>
               </div>
             </div>
@@ -69,17 +70,17 @@
     </div>
     <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
       <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-        <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-          Mira las mejoras de la 0.2.0 <a href="https://github.com/ElSanster/SCRCambio/releases/tag/v0.2.0" class="font-semibold text-indigo-600"><span aria-hidden="true" class="absolute inset-0"></span>Changelog <span aria-hidden="true">&rarr;</span></a>
+        <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 dark:text-gray-300 ring-1 ring-gray-900/10 dark:ring-indigo-500 hover:ring-gray-900/20 dark:hover:ring-indigo-400">
+          Mira las mejoras de la 0.2.0 <a href="https://github.com/ElSanster/SCRCambio/releases/tag/v0.2.0" class="font-semibold text-indigo-600 dark:text-indigo-400"><span aria-hidden="true" class="absolute inset-0"></span>Changelog <span aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
       <div class="text-center">
-        <h1 class="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl">SCRCambio</h1>
+        <h1 class="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl dark:text-gray-100">SCRCambio</h1>
         <img src="./img/logo.png" alt="SCRCambio logo" class="mx-auto mt-6 h-20 w-auto">
-        <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">Usa la pantalla de tu dispositivo como linterna tenue, con control de brillo, colores, customizable y amigable. <br> Multiplataforma, Rápido, y de Código Abierto.</p>
+        <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8 dark:text-gray-400">Usa la pantalla de tu dispositivo como linterna tenue, con control de brillo, colores, customizable y amigable. <br> Multiplataforma, Rápido, y de Código Abierto.</p>
         <div class="mt-10 flex items-center justify-center gap-x-6">
           <a href="download.html" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Descargar</a>
-          <a href="https://github.com/ElSanster/SCRCambio" class="text-sm/6 font-semibold text-gray-900">GitHub<span aria-hidden="true">→</span></a>
+          <a href="https://github.com/ElSanster/SCRCambio" class="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">GitHub<span aria-hidden="true">→</span></a>
         </div>
 
         <div id="carousell-show" class="relative w-full max-w-2xl mx-auto" data-carousel="slide">
@@ -136,14 +137,24 @@
   </div>
 </div>
 
-<footer class="mx-auto max-w-7xl px-6 pb-8 lg:px-8">
-    <div class="border-t border-gray-200 pt-8">
-      <p class="text-xs leading-5 text-gray-500">
-        &copy;El_Sanster <br class="sm:hidden">
-      </p>
+<footer class="mx-auto max-w-7xl px-6 pb-8 lg:px-8 dark:bg-zinc-900">
+    <div class="border-t border-gray-200 dark:border-gray-700 pt-8">
+      <div class="flex items-center justify-between">
+        <p class="text-xs leading-5 text-gray-500 dark:text-gray-400">
+          &copy;El_Sanster <br class="sm:hidden">
+        </p>
+        <div class="flex items-center gap-2">
+          <label class="switch">
+            <input type="checkbox" id="dark-mode-toggle">
+            <span class="slider"></span>
+          </label>
+          <span class="text-xs text-gray-500 dark:text-gray-400">Modo oscuro</span>
+        </div>
+      </div>
     </div>
   </footer>
 
 </body>
 <script src="/node_modules/flowbite/dist/flowbite.min.js"></script>
+<script src="./js/darkModeToggle.js"></script>
 </html>

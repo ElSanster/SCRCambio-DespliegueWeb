@@ -6,13 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SCRCambio</title>
   <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
-   <link href="./output.css" rel="stylesheet">
+  <link href="./output.css" rel="stylesheet">
+  <link href="./main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body>
+<body class="bg-white dark:bg-zinc-900">
   <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
   <!--  -->
-  <header class="bg-white">
+  <header class="bg-white dark:bg-zinc-900">
     <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
       <div class="flex lg:flex-1">
         <a href="./index.html" class="-m-1.5 p-1.5">
@@ -32,9 +34,9 @@
         </button>
       </div>
       <el-popover-group class="hidden lg:flex lg:gap-x-12">
-        <a href="./index.html" class="text-sm/6 font-semibold text-gray-900">Inicio</a>
-        <a href="./download.html" class="text-sm/6 font-semibold text-gray-900">Descargar</a>
-        <a href="https://github.com/ElSanster/SCRCambio" class="text-sm/6 font-semibold text-gray-900">GitHub</a>
+        <a href="./index.html" class="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">Inicio</a>
+        <a href="./download.html" class="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">Descargar</a>
+        <a href="https://github.com/ElSanster/SCRCambio" class="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">GitHub</a>
       </el-popover-group>
     </nav>
     <el-dialog>
@@ -60,11 +62,11 @@
               <div class="-my-6 divide-y divide-gray-500/10">
                 <div class="space-y-2 py-6">
                   <a href="./index.html"
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Inicio</a>
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-100 dark:hover:bg-gray-700">Inicio</a>
                   <a href="./download.html"
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Descargar</a>
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-100 dark:hover:bg-gray-700">Descargar</a>
                   <a href="https://github.com/ElSanster/SCRCambio"
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">GitHub</a>
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-100 dark:hover:bg-gray-700">GitHub</a>
                 </div>
               </div>
             </div>
@@ -75,16 +77,13 @@
   </header>
 
   <main>
-
-    <div class="border-t border-gray-200 pt-8">
-
-    <section class="bg-white-900 py-24 sm:py-32">
+    <section class="bg-white-900 dark:bg-zinc-900 py-24 sm:py-32">
       <div class="max-w-7xl px-6 lg:px-8">
         <div class="max-w-2xl text-left">
-          <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-100">
             SCRCambio 0.2.0
           </h2>
-          <p class="mt-6 text-lg leading-8 text-gray-600">
+          <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
             Versión con hápticas desactivables, personalización de colores y interfaz mejorada. <br> Junto con soporte para Linux.
           </p>
           <div class="mt-10 flex flex-wrap items-center gap-4">
@@ -110,7 +109,7 @@
 
             <!-- Enlace Changelog -->
             <a href="https://github.com/ElSanster/SCRCambio/releases/tag/v0.2.0"
-              class="ml-2 text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition-colors">
+              class="ml-2 text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 dark:text-gray-100 dark:hover:text-indigo-400 transition-colors">
               Ver cambios <span aria-hidden="true">→</span>
             </a>
           </div>
@@ -118,19 +117,18 @@
       </div>
     </section>
 
-    <section class="bg-white-900 py-24 sm:py-32">
+    <section class="bg-white-900 dark:bg-zinc-900 py-24 sm:py-32">
       <div class="max-w-7xl px-6 lg:px-8">
         <div class="max-w-2xl text-left">
-          <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-100">
             SCRCambio 0.1.1
           </h2>
-          <p class="mt-6 text-lg leading-8 text-gray-600">
+          <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
             Versión con el botón de reiniciar todas las configuraciones.
           </p>
           <div class="mt-10 flex flex-wrap items-center gap-4">
             <a href="https://github.com/ElSanster/SCRCambio/releases/download/v0.1.1/Windows-x64.zip"
               class="inline-flex items-center gap-x-2 rounded-md bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-all">
-              <!-- Logos pueden tener problemas por trademark -->
               <i class="fa-brands fa-windows"></i>
               Windows (.zip)
             </a>
@@ -150,20 +148,20 @@
 
             <!-- Enlace Changelog -->
             <a href="https://github.com/ElSanster/SCRCambio/releases/tag/v0.1.1"
-              class="ml-2 text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition-colors">
+              class="ml-2 text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 dark:text-gray-100 dark:hover:text-indigo-400 transition-colors">
               Ver cambios <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>
       </div>
     </section>
-    <section class="bg-white-900 py-24 sm:py-32">
+    <section class="bg-white-900 dark:bg-zinc-900 py-24 sm:py-32">
       <div class="max-w-7xl px-6 lg:px-8">
         <div class="max-w-2xl text-left">
-          <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-100">
             SCRCambio 0.1.0
           </h2>
-          <p class="mt-6 text-lg leading-8 text-gray-600">
+          <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
             Versión con las funciones principales. Brillo, hapticas y bienvenida.
           </p>
           <div class="mt-10 flex flex-wrap items-center gap-4">
@@ -189,7 +187,7 @@
 
             <!-- Enlace Changelog -->
             <a href="https://github.com/ElSanster/SCRCambio/releases/tag/v0.1.0"
-              class="ml-2 text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition-colors">
+              class="ml-2 text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 dark:text-gray-100 dark:hover:text-indigo-400 transition-colors">
               Ver cambios <span aria-hidden="true">→</span>
             </a>
           </div>
@@ -197,17 +195,28 @@
       </div>
     </section>
   </main>
-  <footer class="mx-auto max-w-7xl px-6 pb-8 lg:px-8">
-    <div class="border-t border-gray-200 pt-8">
-      <p class="text-xs leading-5 text-gray-500">
-        &copy;El_Sanster <br class="sm:hidden"> <br> 
-        Windows es una marca de Microsoft Corp.<br> 
-        Android es una marca de Google LLC. <br>
-        Linux® es la marca registrada de Linus Torvalds en EE.UU. y otros países.<br>
-        Uso de logotipos para fines ilustrativos.
-      </p>
+
+
+  <footer class="mx-auto max-w-7xl px-6 pb-8 lg:px-8 dark:bg-zinc-900">
+    <div class="border-t border-gray-200 dark:border-gray-700 pt-8">
+      <div class="flex items-center justify-between gap-4">
+        <p class="text-xs leading-5 text-gray-500 dark:text-gray-400">
+          &copy;El_Sanster <br class="sm:hidden"> <br> 
+          Windows es una marca de Microsoft Corp.<br> 
+          Android es una marca de Google LLC. <br>
+          Linux® es la marca registrada de Linus Torvalds en EE.UU. y otros países.<br>
+          Uso de logotipos para fines ilustrativos.
+        </p>
+        <div class="flex items-center gap-2 whitespace-nowrap">
+          <label class="switch">
+            <input type="checkbox" id="dark-mode-toggle">
+            <span class="slider"></span>
+          </label>
+          <span class="text-xs text-gray-500 dark:text-gray-400">Modo oscuro</span>
+        </div>
+      </div>
     </div>
   </footer>
 </body>
-
+<script src="./js/darkModeToggle.js"></script>
 </html>
