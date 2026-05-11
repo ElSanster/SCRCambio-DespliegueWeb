@@ -27,3 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+// Función para abrir GitHub
+function openGitHub() {
+  window.open('https://github.com/ElSanster/SCRCambio', '_blank');
+}

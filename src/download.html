@@ -12,6 +12,8 @@
 </head>
 
 <body class="bg-white dark:bg-zinc-900">
+  <!-- Enlace para saltar al contenido -->
+  <a href="#first-download-btn" class="sr-only focus:not-sr-only focus:outline-2 focus:outline-offset-2 focus:outline-indigo-600">Saltar al contenido principal</a>
   <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
   <!--  -->
   <header class="bg-white dark:bg-zinc-900">
@@ -40,10 +42,11 @@
       </el-popover-group>
     </nav>
     <el-dialog>
-      <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+      <dialog id="mobile-menu" role="dialog" aria-labelledby="menu-title" class="backdrop:bg-transparent lg:hidden">
         <div tabindex="0" class="fixed inset-0 focus:outline-none">
+          <h2 id="menu-title" class="sr-only">Menú de navegación</h2>
           <el-dialog-panel
-            class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white dark:bg-zinc-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div class="flex items-center justify-between">
               <a href="#" class="-m-1.5 p-1.5">
                 <span class="sr-only">SCRCambio</span>
@@ -88,7 +91,7 @@
           </p>
           <div class="mt-10 flex flex-wrap items-center gap-4">
             <a href="https://github.com/ElSanster/SCRCambio/releases/download/v0.2.0/scrcambio_app-0.2.0-windows-setup.exe"
-              class="inline-flex items-center gap-x-2 rounded-md bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-all">
+              id="first-download-btn" class="inline-flex items-center gap-x-2 rounded-md bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-all">
               <!-- Logos pueden tener problemas por trademark -->
               <i class="fa-brands fa-windows"></i>
               Windows Installer (.exe)
@@ -209,14 +212,22 @@
         </p>
         <div class="flex items-center gap-2 whitespace-nowrap">
           <label class="switch">
-            <input type="checkbox" id="dark-mode-toggle">
+            <input type="checkbox" id="dark-mode-toggle" aria-describedby="dark-mode-label">
             <span class="slider"></span>
           </label>
-          <span class="text-xs text-gray-500 dark:text-gray-400">Modo oscuro</span>
+          <span id="dark-mode-label" class="text-xs text-gray-500 dark:text-gray-400">Modo oscuro</span>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- Botón flotante GitHub -->
+  <div class="github-float-container">
+    <button class="github-float-btn" onclick="openGitHub()" aria-label="Abrir GitHub de SCRCambio">
+      <i class="fab fa-github"></i>
+    </button>
+  </div>
+
 </body>
 <script src="./js/darkModeToggle.js"></script>
 </html>
