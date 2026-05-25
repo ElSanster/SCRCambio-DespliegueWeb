@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SCRCambio</title>
+  <title>SCRCambio – Descargar</title>
   <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
   <link href="./output.css" rel="stylesheet">
   <link href="./main.css" rel="stylesheet">
@@ -12,64 +11,65 @@
 </head>
 
 <body class="bg-white dark:bg-zinc-900">
-  <!-- Enlace para saltar al contenido -->
-  <a href="#first-download-btn" class="sr-only focus:not-sr-only focus:outline-2 focus:outline-offset-2 focus:outline-indigo-600">Saltar al contenido principal</a>
-  <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
-  <!--  -->
+
+  <!-- Saltar al contenido -->
+  <a href="#first-download-btn" class="sr-only focus:not-sr-only focus:outline-2 focus:outline-offset-2 focus:outline-indigo-600">
+    Saltar al contenido principal
+  </a>
+
+  <!-- HEADER -->
   <header class="bg-white dark:bg-zinc-900">
     <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
       <div class="flex lg:flex-1">
         <a href="./index.html" class="-m-1.5 p-1.5">
           <span class="sr-only">SCRCambio</span>
-          <img src="./img/logo.png" alt="SCRCambio Logo"
-            class="h-8 w-auto" />
+          <img src="./img/logo.png" alt="SCRCambio Logo" class="h-8 w-auto">
         </a>
       </div>
+
+      <!-- Hamburger (móvil) -->
       <div class="flex lg:hidden">
         <button type="button" command="show-modal" commandfor="mobile-menu"
           class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-          <span class="sr-only">Open main menu</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
-            aria-hidden="true" class="size-6">
-            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+          <span class="sr-only">Abrir menú principal</span>
+          <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
       </div>
-      <el-popover-group class="hidden lg:flex lg:gap-x-12">
-        <a href="./index.html" class="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">Inicio</a>
+
+      <!-- Links escritorio -->
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a href="./index.html"   class="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">Inicio</a>
         <a href="./download.html" class="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">Descargar</a>
         <a href="https://github.com/ElSanster/SCRCambio" class="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">GitHub</a>
-      </el-popover-group>
+      </div>
     </nav>
+
+    <!-- Menú móvil -->
     <el-dialog>
       <dialog id="mobile-menu" role="dialog" aria-labelledby="menu-title" class="backdrop:bg-transparent lg:hidden">
         <div tabindex="0" class="fixed inset-0 focus:outline-none">
           <h2 id="menu-title" class="sr-only">Menú de navegación</h2>
-          <el-dialog-panel
-            class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white dark:bg-zinc-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white dark:bg-zinc-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div class="flex items-center justify-between">
-              <a href="#" class="-m-1.5 p-1.5">
+              <a href="./index.html" class="-m-1.5 p-1.5">
                 <span class="sr-only">SCRCambio</span>
-                <img src="..." alt="" class="h-8 w-auto" />
+                <img src="./img/logo.png" alt="" class="h-8 w-auto">
               </a>
-              <button type="button" command="close" commandfor="mobile-menu"
-                class="-m-2.5 rounded-md p-2.5 text-gray-700">
-                <span class="sr-only">Close menu</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
-                  aria-hidden="true" class="size-6">
-                  <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+              <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                <span class="sr-only">Cerrar menú</span>
+                <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
             </div>
             <div class="mt-6 flow-root">
               <div class="-my-6 divide-y divide-gray-500/10">
                 <div class="space-y-2 py-6">
-                  <a href="./index.html"
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-100 dark:hover:bg-gray-700">Inicio</a>
-                  <a href="./download.html"
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-100 dark:hover:bg-gray-700">Descargar</a>
-                  <a href="https://github.com/ElSanster/SCRCambio"
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-100 dark:hover:bg-gray-700">GitHub</a>
+                  <a href="./index.html"   class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-100 dark:hover:bg-gray-700">Inicio</a>
+                  <a href="./download.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-100 dark:hover:bg-gray-700">Descargar</a>
+                  <a href="https://github.com/ElSanster/SCRCambio" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-100 dark:hover:bg-gray-700">GitHub</a>
                 </div>
               </div>
             </div>
@@ -79,38 +79,37 @@
     </el-dialog>
   </header>
 
+  <!-- MAIN -->
   <main>
-    <section class="bg-white-900 dark:bg-zinc-900 py-24 sm:py-32">
+
+    <!-- v0.2.0 -->
+    <section class="dark:bg-zinc-900 py-24 sm:py-32">
       <div class="max-w-7xl px-6 lg:px-8">
-        <div class="max-w-2xl text-left">
+        <div class="max-w-2xl">
           <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-100">
             SCRCambio 0.2.0
           </h2>
           <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
-            Versión con hápticas desactivables, personalización de colores y interfaz mejorada. <br> Junto con soporte para Linux.
+            Versión con hápticas desactivables, personalización de colores y interfaz mejorada.<br>
+            Junto con soporte para Linux.
           </p>
           <div class="mt-10 flex flex-wrap items-center gap-4">
             <a href="https://github.com/ElSanster/SCRCambio/releases/download/v0.2.0/scrcambio_app-0.2.0-windows-setup.exe"
-              id="first-download-btn" class="inline-flex items-center gap-x-2 rounded-md bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-all">
-              <!-- Logos pueden tener problemas por trademark -->
-              <i class="fa-brands fa-windows"></i>
+              id="first-download-btn"
+              class="inline-flex items-center gap-x-2 rounded-md bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-all">
+              <i class="fa-brands fa-windows" aria-hidden="true"></i>
               Windows Installer (.exe)
             </a>
-            <!-- Botón Linux (en esta versión se le da soporte)-->
             <a href="https://github.com/ElSanster/SCRCambio/releases/download/v0.2.0/scrcambio_app-0.2.0-linux.AppImage"
               class="inline-flex items-center gap-x-2 rounded-md bg-gray-800 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 transition-all">
-              <i class="fa-brands fa-linux"></i>
+              <i class="fa-brands fa-linux" aria-hidden="true"></i>
               Linux (AppImage)
             </a>
-
-            <!-- Botón Android -->
             <a href="https://github.com/ElSanster/SCRCambio/releases/download/v0.2.0/scrcambio_app-production-0.2.0-android.apk"
               class="inline-flex items-center gap-x-2 rounded-md bg-green-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-500 transition-all">
-              <i class="fa-brands fa-android"></i>
+              <i class="fa-brands fa-android" aria-hidden="true"></i>
               Android (.apk)
             </a>
-
-            <!-- Enlace Changelog -->
             <a href="https://github.com/ElSanster/SCRCambio/releases/tag/v0.2.0"
               class="ml-2 text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 dark:text-gray-100 dark:hover:text-indigo-400 transition-colors">
               Ver cambios <span aria-hidden="true">→</span>
@@ -120,9 +119,10 @@
       </div>
     </section>
 
-    <section class="bg-white-900 dark:bg-zinc-900 py-24 sm:py-32">
+    <!-- v0.1.1 -->
+    <section class="dark:bg-zinc-900 py-24 sm:py-32">
       <div class="max-w-7xl px-6 lg:px-8">
-        <div class="max-w-2xl text-left">
+        <div class="max-w-2xl">
           <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-100">
             SCRCambio 0.1.1
           </h2>
@@ -132,24 +132,15 @@
           <div class="mt-10 flex flex-wrap items-center gap-4">
             <a href="https://github.com/ElSanster/SCRCambio/releases/download/v0.1.1/Windows-x64.zip"
               class="inline-flex items-center gap-x-2 rounded-md bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-all">
-              <i class="fa-brands fa-windows"></i>
+              <i class="fa-brands fa-windows" aria-hidden="true"></i>
               Windows (.zip)
             </a>
-            <!-- Versión no disponible para linux-->
-            <!-- <a href="#"
-              class="inline-flex items-center gap-x-2 rounded-md bg-gray-800 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 transition-all">
-              <i class="fa-brands fa-linux"></i>
-              Linux ()
-            </a> -->
-
-            <!-- Botón Android -->
+            <!-- Linux no disponible en esta versión -->
             <a href="https://github.com/ElSanster/SCRCambio/releases/download/v0.1.1/Android-universal.apk"
               class="inline-flex items-center gap-x-2 rounded-md bg-green-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-500 transition-all">
-              <i class="fa-brands fa-android"></i>
+              <i class="fa-brands fa-android" aria-hidden="true"></i>
               Android (.apk)
             </a>
-
-            <!-- Enlace Changelog -->
             <a href="https://github.com/ElSanster/SCRCambio/releases/tag/v0.1.1"
               class="ml-2 text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 dark:text-gray-100 dark:hover:text-indigo-400 transition-colors">
               Ver cambios <span aria-hidden="true">→</span>
@@ -158,37 +149,29 @@
         </div>
       </div>
     </section>
-    <section class="bg-white-900 dark:bg-zinc-900 py-24 sm:py-32">
+
+    <!-- v0.1.0 -->
+    <section class="dark:bg-zinc-900 py-24 sm:py-32">
       <div class="max-w-7xl px-6 lg:px-8">
-        <div class="max-w-2xl text-left">
+        <div class="max-w-2xl">
           <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-100">
             SCRCambio 0.1.0
           </h2>
           <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
-            Versión con las funciones principales. Brillo, hapticas y bienvenida.
+            Versión con las funciones principales: brillo, hápticas y bienvenida.
           </p>
           <div class="mt-10 flex flex-wrap items-center gap-4">
             <a href="https://github.com/ElSanster/SCRCambio/releases/download/v0.1.0/Windows-x64.zip"
               class="inline-flex items-center gap-x-2 rounded-md bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-all">
-              <!-- Logos pueden tener problemas por trademark -->
-              <i class="fa-brands fa-windows"></i>
+              <i class="fa-brands fa-windows" aria-hidden="true"></i>
               Windows (.zip)
             </a>
-            <!-- Versión no disponible para linux-->
-            <!-- <a href="#"
-              class="inline-flex items-center gap-x-2 rounded-md bg-gray-800 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 transition-all">
-              <i class="fa-brands fa-linux"></i>
-              Linux ()
-            </a> -->
-
-            <!-- Botón Android -->
+            <!-- Linux no disponible en esta versión -->
             <a href="https://github.com/ElSanster/SCRCambio/releases/download/v0.1.0/Android-universal.apk"
               class="inline-flex items-center gap-x-2 rounded-md bg-green-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-500 transition-all">
-              <i class="fa-brands fa-android"></i>
+              <i class="fa-brands fa-android" aria-hidden="true"></i>
               Android (.apk)
             </a>
-
-            <!-- Enlace Changelog -->
             <a href="https://github.com/ElSanster/SCRCambio/releases/tag/v0.1.0"
               class="ml-2 text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 dark:text-gray-100 dark:hover:text-indigo-400 transition-colors">
               Ver cambios <span aria-hidden="true">→</span>
@@ -197,26 +180,25 @@
         </div>
       </div>
     </section>
+
   </main>
 
-
+  <!-- FOOTER -->
   <footer class="mx-auto max-w-7xl px-6 pb-8 lg:px-8 dark:bg-zinc-900">
-    <div class="border-t border-gray-200 dark:border-gray-700 pt-8">
-      <div class="flex items-center justify-between gap-4">
-        <p class="text-xs leading-5 text-gray-500 dark:text-gray-400">
-          &copy;El_Sanster <br class="sm:hidden"> <br> 
-          Windows es una marca de Microsoft Corp.<br> 
-          Android es una marca de Google LLC. <br>
-          Linux® es la marca registrada de Linus Torvalds en EE.UU. y otros países.<br>
-          Uso de logotipos para fines ilustrativos.
-        </p>
-        <div class="flex items-center gap-2 whitespace-nowrap">
-          <label class="switch">
-            <input type="checkbox" id="dark-mode-toggle" aria-describedby="dark-mode-label">
-            <span class="slider"></span>
-          </label>
-          <span id="dark-mode-label" class="text-xs text-gray-500 dark:text-gray-400">Modo oscuro</span>
-        </div>
+    <div class="border-t border-gray-200 dark:border-gray-700 pt-8 flex items-center justify-between gap-4">
+      <p class="text-xs leading-5 text-gray-500 dark:text-gray-400">
+        &copy; El_Sanster<br>
+        Windows es una marca de Microsoft Corp.<br>
+        Android es una marca de Google LLC.<br>
+        Linux® es la marca registrada de Linus Torvalds en EE.UU. y otros países.<br>
+        Uso de logotipos para fines ilustrativos.
+      </p>
+      <div class="flex items-center gap-2 whitespace-nowrap">
+        <label class="switch">
+          <input type="checkbox" id="dark-mode-toggle" aria-describedby="dark-mode-label">
+          <span class="slider"></span>
+        </label>
+        <span id="dark-mode-label" class="text-xs text-gray-500 dark:text-gray-400">Modo oscuro</span>
       </div>
     </div>
   </footer>
@@ -228,6 +210,6 @@
     </button>
   </div>
 
+  <script src="./js/darkModeToggle.js"></script>
 </body>
-<script src="./js/darkModeToggle.js"></script>
 </html>
